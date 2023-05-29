@@ -1,16 +1,16 @@
 
 
-function Special(props){
+function Special(props) {
     return (
         <div className="h-full flex flex-col bg-zinc-100 rounded-lg overflow-hidden border border-slate-200">
-            <img className="object-cover h-40" src={props.img} alt="Specials image" />
+            <img role="image" className="object-cover h-40" src={props.img} alt="Specials image" />
             <div className="p-5 h-full flex flex-col">
                 <div className="flex flex-row justify-between mb-2">
-                    <h4 className="font-semibold text-zinc-900" >{props.name}</h4>
-                    <p className="font-md text-orange-400">${props.price}</p>
+                    <h4 role="heading" className="font-semibold text-zinc-900" >{props.name}</h4>
+                    <p role="complementary" className="font-md text-orange-400">${props.price}</p>
                 </div>
-                <p className="text-sm mb-2 text-zinc-500">{props.text}</p>
-                <a href="" className="mt-auto text-sm text-zinc-900 font-semibold tracking-wide hover:text-yellow-400">Order a delivery</a>
+                <p role="complementary" className="text-sm mb-2 text-zinc-500">{props.text}</p>
+                <a role="link" className="mt-auto text-sm text-zinc-900 font-semibold tracking-wide hover:text-yellow-400">Order a delivery</a>
             </div>
         </div>
     )

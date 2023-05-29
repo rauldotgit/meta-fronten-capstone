@@ -40,7 +40,6 @@ const sContentDesktop = `
 
 const sLogo = `
     text-zinc-950
-    hover:bg-yellow-200
 `
 const sDesktopNav = `
     lg:flex hidden
@@ -65,47 +64,47 @@ function Header() {
 
     const [dropDown, setDropDown] = useState(false)
 
-    function showDropDown(){
+    function showDropDown() {
         setDropDown(!dropDown)
     }
 
     return (
-        <div className={sHeader}>
+        <header className={sHeader}>
             <div className={sPhone}>
                 <div className={sPhoneTop}>
                     <Link to="/" className={sLogo}>
-                        <img src={Logo} alt="Little Logo" />
+                        <img role='banner' src={Logo} alt="Little Logo" />
                     </Link>
                     <img onClick={showDropDown} className={sHamburger} src={Hamburger1} alt="Hamburger" />
                 </div>
-                {   dropDown &&
-                    <nav className={sPhoneBottom}>
+                {dropDown &&
+                    <nav role='nav' className={sPhoneBottom}>
                         <Link to="/" className={sLink}>Home</Link>
-                        <a className={sLink}>About</a>
-                        <a className={sLink}>Menu</a>
+                        <Link className={sLink}>About</Link>
+                        <Link className={sLink}>Menu</Link>
                         <Link className={sLink} to="/reserve/date">Reservations</Link>
-                        <a className={sLink}>Order Online</a>
-                        <a className={sLink}>Login</a>
+                        <Link className={sLink}>Order Online</Link>
+                        <Link className={sLink}>Login</Link>
                     </nav>
                 }
             </div>
             <div className={sContentDesktop}>
                 <Link to="/" className={sLogo}>
-                    <img src={Logo} alt="Little Logo" />
+                    <img role='banner' src={Logo} alt="Little Logo" />
                 </Link>
 
-                <nav className={sDesktopNav}>
+                <nav role='nav' className={sDesktopNav}>
                     <Link to="/" className={sLink}>Home</Link>
-                    <a className={sLink}>About</a>
-                    <a className={sLink}>Menu</a>
+                    <Link className={sLink}>About</Link>
+                    <Link className={sLink}>Menu</Link>
                     <Link className={sLink} to="/reserve/date">Reservations</Link>
-                    <a className={sLink}>Order Online</a>
-                    <a className={sLink}>Login</a>
+                    <Link className={sLink}>Order Online</Link>
+                    <Link className={sLink}>Login</Link>
                 </nav>
 
                 {/* <img className={sHamburger} src={Hamburger1} alt="Hamburger" /> */}
             </div>
-        </div>
+        </header>
     )
 }
 

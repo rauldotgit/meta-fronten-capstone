@@ -12,9 +12,9 @@ const sDetailItem = `
 
 export default function Confirmation(props){
     return (
-        <div className="py-16 h-screen w-full bg-zinc-200 flex flex-col justify-center items-center">
-            <div className="flex flex-col justify-between bg-white w-2/3 lg:w-1/2 xl:w-2/5 rounded-lg p-16">
-                <h1 className="text-zinc-800 text-2xl">Reservation successful!</h1>
+        <main role='main' className="py-16 h-screen w-full bg-zinc-200 flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-between bg-white w-2/3 lg:w-1/2 xl:w-2/5 rounded-lg p-10 sm:p-16">
+                <h1 role='heading' className="text-zinc-800 text-2xl">Reservation successful!</h1>
                 <div className="mt-2 grid grid-cols-3 gap-2">
                     <div className="rounded-sm h-2 border border-zinc-400 bg-little-green"></div>
                     <div className="rounded-sm h-2 border border-zinc-400 bg-little-green"></div>
@@ -47,6 +47,6 @@ export default function Confirmation(props){
                     </Link>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

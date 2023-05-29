@@ -11,23 +11,23 @@ const sContainer = `
 function Home(){
 
     return(
-        <div >
-            <div className={sContainer + "bg-little-green"}>
+        <main>
+            <section className={sContainer + "bg-little-green"}>
                 <Title/>
-            </div>
+            </section>
 
-            <div className={sContainer + "bg-white"}>
+            <section className={sContainer + "bg-white"}>
                 <Specials/>
-            </div>
+            </section>
 
-            <div className={sContainer + "bg-little-green"}>
+            <section className={sContainer + "bg-little-green"}>
                 <Reviews/>
-            </div>
+            </section>
             
-            <div className={sContainer + "bg-white"}>
+            <section className={sContainer + "bg-white"}>
                 <About/>
-            </div>
-        </div>
+            </section>
+        </main>
     )
 }
 

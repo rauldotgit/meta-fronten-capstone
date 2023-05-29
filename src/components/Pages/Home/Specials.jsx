@@ -37,7 +37,7 @@ export default function Specials(){
     return(
         <div className="xl:w-1/2 w-3/4 mt-12">
             <div className="flex flex-row justify-between my-10">
-                <h2 className="font-serif text-3xl text-zinc-900">This Weeks Specials</h2>
+                <h2 role="heading" className="font-serif text-3xl text-zinc-900">This Weeks Specials</h2>
                 <button role="button" className={sButton}>Our Menu</button>
             </div>
             <div className={sSpecialsContainer}>
