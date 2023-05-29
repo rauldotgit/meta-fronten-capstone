@@ -1,33 +1,54 @@
+import Header from "./components/Header"
+import Home from "./components/Pages/Home/Home"
+import Footer from "./components/Footer.jsx"
+// import Reservation from "./components/Reservation"
+import Selection from "./components/Pages/Reservation/Selection"
+import Form from "./components/Pages/Reservation/Form"
+import Confirmation from "./components/Pages/Reservation/Confirmation"
+
+import {Route, Routes} from 'react-router-dom'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const formObject = {
+    date: '',
+    time: '',
+    guests: 1,
+    occasion: '',
+    first: '',
+    last: '',
+    email: '',
+    phone: ''
+  }
+
+  const [formData, setFormData] = useState(formObject)
+
+  function handleChange(e){
+      console.log(formData)
+      setFormData( prevData =>{
+          return {...prevData, [e.target.name]: e.target.value}
+      })
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/reserve/date" element={
+          <Selection handleChange={handleChange} formData={formData}/>
+        }/>
+
+        <Route path="/reserve/form" element={
+          <Form handleChange={handleChange} formData={formData}/>
+        } />
+
+        <Route path="/reserve/confirm" element={
+          <Confirmation handleChange={handleChange} formData={formData}/>
+        } />
+      </Routes>
+      <Footer />
     </>
   )
 }
