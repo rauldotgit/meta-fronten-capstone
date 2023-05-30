@@ -1,4 +1,4 @@
-import TitleImage from "/icons_assets/restauranfood.jpg"
+import TitleImage from "/webp_files/entrees.webp"
 
 const sContainer = `
     xl:w-1/2 w-3/4

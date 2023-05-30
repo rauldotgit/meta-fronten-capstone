@@ -1,5 +1,5 @@
-import ImgKitchen from "/icons_assets/Mario and Adrian A.jpg"
-import ImgKitchen2 from "/icons_assets/Mario and Adrian b.jpg"
+import ImgKitchen from "/webp_files/mario_and_adrian.webp"
+import ImgKitchen2 from "/webp_files/mario_and_adrian_2.webp"
 
 const sContainer = `
     xl:w-1/2 w-3/4
