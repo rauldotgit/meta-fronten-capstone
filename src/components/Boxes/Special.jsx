@@ -39,7 +39,8 @@ const sOrderCTO = `
     mt-auto
     text-sm text-zinc-900
     font-semibold tracking-wide
-    hover:text-yellow-400 
+    hover:text-yellow-400
+    cursor-pointer
 `
 
 function Special(props) {

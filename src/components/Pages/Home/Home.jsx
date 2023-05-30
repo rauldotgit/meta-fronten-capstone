@@ -1,7 +1,7 @@
-import Title from "./Title"
-import Specials from "./Specials"
-import Reviews from "./Reviews"
-import About from "./About"
+import Title from "./H_Title"
+import Specials from "./H_Specials"
+import Reviews from "./H_Reviews"
+import About from "./H_About"
 
 const sContainer = `
     w-full

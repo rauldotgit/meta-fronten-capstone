@@ -82,7 +82,7 @@ function Header() {
                         <Link to="/" className={sLink}>Home</Link>
                         <Link className={sLink}>About</Link>
                         <Link className={sLink}>Menu</Link>
-                        <Link className={sLink} to="/reserve/date">Reservations</Link>
+                        <Link className={sLink} to="/reserve">Reservations</Link>
                         <Link className={sLink}>Order Online</Link>
                         <Link className={sLink}>Login</Link>
                     </nav>
@@ -97,7 +97,7 @@ function Header() {
                     <Link to="/" className={sLink}>Home</Link>
                     <Link className={sLink}>About</Link>
                     <Link className={sLink}>Menu</Link>
-                    <Link className={sLink} to="/reserve/date">Reservations</Link>
+                    <Link className={sLink} to="/reserve">Reservations</Link>
                     <Link className={sLink}>Order Online</Link>
                     <Link className={sLink}>Login</Link>
                 </nav>

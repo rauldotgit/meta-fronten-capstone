@@ -1,4 +1,5 @@
 import TitleImage from "/webp_files/entrees.webp"
+import { Link } from "react-router-dom"
 
 const sContainer = `
     xl:w-1/2 w-3/4
@@ -61,7 +62,9 @@ export default function Title(){
                 <h1 role="heading" className={sMainHeading}>Little Lemon</h1>
                 <h2 role="heading" className={sSubHeading}>Chicago</h2>
                 <p role="complementary" className={sPara}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae unde laudantium vel, accusantium laboriosam quia illo.</p>
-                <button role="button" className={sButton}>Reserve a table</button>
+                <Link to="/reserve/date">
+                    <button role="button" className={sButton}>Reserve a table</button>
+                </Link>
             </div>
 
             <div className={sImgContainer}>

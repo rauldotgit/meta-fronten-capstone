@@ -23,8 +23,14 @@ const seededRandom = function (seed) {
     return result;
   }
 
-  function submitAPI() {
-    return true;
+  function submitAPI(formData) {
+    return new Promise((resolve, reject)=>{
+      if (formData){
+        resolve(true)
+      } else {
+        reject(false)
+      }
+    })
   }
 
   export {fetchAPI, submitAPI}
