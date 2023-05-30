@@ -45,7 +45,7 @@ const sOrderCTO = `
 function Special(props) {
     return (
         <div className={sCard}>
-            <img role="img" className={sImage} src={props.img} alt="Specials image" />
+            <img role="img" className={sImage + props.class} src={props.img} alt="Specials image" />
             <div className={sTextContainer}>
                 <div className={sNamePriceContainer}>
                     <h3 role="heading" className={sName} >{props.name}</h3>
