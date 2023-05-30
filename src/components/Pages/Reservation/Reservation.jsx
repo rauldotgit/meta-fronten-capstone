@@ -19,11 +19,21 @@ const sContent = `
     rounded-lg
 `
 
+const sHeader = `
+    text-zinc-800 text-2xl  
+`
+
+const sProgressContainer = `
+    grid grid-cols-3 gap-2
+    mt-2
+`
+
 const sProgress = `
     rounded-sm
     h-2
     border border-zinc-400
 `
+
 export default function Reservation() {
 
     const formObject = {
@@ -105,8 +115,8 @@ export default function Reservation() {
     return (
         <main role="main" className={sContainer}>
             <div className={sContent}>
-                <h1 role="heading" className="text-zinc-800 text-2xl">{headerSwitch()}</h1>
-                <div className="mt-2 grid grid-cols-3 gap-2">
+                <h1 role="heading" className={sHeader}>{headerSwitch()}</h1>
+                <div className={sProgressContainer}>
                     <div className={formPage >= 0 ? sProgress + " bg-little-green " : sProgress}></div>
                     <div className={formPage >= 1 ? sProgress + " bg-little-green " : sProgress}></div>
                     <div className={formPage >= 2 ? sProgress + " bg-little-green " : sProgress}></div>
