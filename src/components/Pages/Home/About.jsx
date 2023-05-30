@@ -45,8 +45,8 @@ function About(){
                     <p role="complementary" className={sAboutParagraph}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto perspiciatis, tempora commodi possimus cupiditate dolores recusandae placeat facere reprehenderit, vero, neque quisquam cumque delectus temporibus nostrum facilis ipsa! Accusantium, rem.</p>
             </div>
             <div className={sAboutImgBox}>
-                <img role="image" className={sImage + " mb-2 "} src={ImgKitchen} alt="" />
-                <img role="image" className={sImage} src={ImgKitchen2} alt="" />                    
+                <img loading="lazy" role="img" className={sImage + " mb-2 "} src={ImgKitchen} alt="" />
+                <img loading="lazy" role="img" className={sImage} src={ImgKitchen2} alt="" />                    
             </div>
         </div>
     )

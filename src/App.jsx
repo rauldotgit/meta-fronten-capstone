@@ -33,11 +33,6 @@ function App() {
     })
   }
 
-  // function fetchTimes(){
-  //   const times = fetchAPI(formData.date)
-  //   setTimes(times)
-  // }
-
   useEffect(() => {
     let times = fetchAPI(formData.date)
     console.log(times);

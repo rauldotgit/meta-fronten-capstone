@@ -1,12 +1,42 @@
+const sCard = `
+    flex flex-col gap-2
+    p-5
+    bg-zinc-100
+    rounded-lg
+    overflow-hidden
+    `
 
-function Review(props) {
+const sImage = `
+    w-28 h-28
+    self-center  
+    object-top object-cover
+    rounded-full
+`
+
+const sName = `
+    font-semibold
+    self-center
+    text-zinc-800
+`
+
+const sReview = `
+    self-start
+    text-zinc-600
+`
+
+export default function Review(props) {
     return (
-        <div className="p-5 overflow-hidden bg-zinc-100 rounded-lg flex flex-col gap-2">
-            <img className="w-28 h-28 object-top object-cover rounded-full self-center" src={props.img} alt="Review Headshot" role="image" />
-            <p role="complementary" className="font-semibold self-center text-zinc-800">{props.name}</p>
-            <p role="complementary" className="self-start text-zinc-600">&quot;{props.text}&quot;</p>
+        <div className={sCard}>
+            <img className={sImage} src={props.img} alt="Review Headshot" role="img" />
+            <p role="complementary" className={sName}>{props.name}</p>
+            <p role="complementary" className={sReview}>&quot;{props.text}&quot;</p>
         </div>
     )
 }
 
-export default Review
+
+Review.defaultProps = {
+    img: '/profile1.jpg',
+    name: 'John Doe',
+    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam similique molestias earum pariatur dolorem ex quaerat modi esse voluptatem quibusdam, doloribus atque, alias eligendi accusamus, et deleniti minus optio inventore!"
+}

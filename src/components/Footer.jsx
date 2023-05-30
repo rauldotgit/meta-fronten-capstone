@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Logo from '/icons_assets/Logo.svg'
 
 const sFooter = `
@@ -26,6 +27,11 @@ const sHeader = `
 const sLinks = `
     flex flex-col
 `
+
+const sLink = `
+    hover:text-yellow-400   
+`
+
 const sInfo = `
     flex gap-2  
 `
@@ -42,18 +48,18 @@ function Footer() {
     return (
         <footer className={sFooter}>
             <div className={sContent}>
-                <a role='link' href="" className="">
-                    <img role='banner' className={sLogo} src={Logo} alt="Little Lemon Footer Logo" />
-                </a>
+                <Link role='link' to="" className="">
+                    <img loading='lazy' role='banner' className={sLogo} src={Logo} alt="Little Lemon Footer Logo" />
+                </Link>
                 <div role='nav'>
                     <h2 role='heading' className={sHeader}>Pages</h2>
                     <div className={sLinks}>
-                        <a role='link' className='hover:text-yellow-400' href="/">Home</a>
-                        <a role='link' className='hover:text-yellow-400' href="">About</a>
-                        <a role='link' className='hover:text-yellow-400' href="">Menu</a>
-                        <a role='link' className='hover:text-yellow-400' href="">Reservations</a>
-                        <a role='link' className='hover:text-yellow-400' href="">Order Online</a>
-                        <a role='link' className='hover:text-yellow-400' href="">Login</a>
+                        <Link role='link' className={sLink} to="/">Home</Link>
+                        <Link role='link' className={sLink} to="">About</Link>
+                        <Link role='link' className={sLink} to="">Menu</Link>
+                        <Link role='link' className={sLink} to="">Reservations</Link>
+                        <Link role='link' className={sLink} to="">Order Online</Link>
+                        <Link role='link' className={sLink} to="">Login</Link>
                     </div>
                 </div>
 
